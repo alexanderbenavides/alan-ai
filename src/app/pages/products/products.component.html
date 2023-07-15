@@ -1,0 +1,16 @@
+<section class="container">
+  <article class="row">
+    <div class="card col-12 col-md-4 col-lg-3" *ngFor="let item of products">
+      <div class="card-body {{currentId === item.id ? 'highlight' : ''}}">
+        <h5 class="card-title">{{item.name}}</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">{{item.username}}</h6>
+        <p class="card-text">
+          email: {{item.email}}
+          phone: {{item.phone}}
+        </p>
+        <a href="{{item.website}}" class="card-link" target="_blank">Website</a>
+        {{currentId === item.id}}
+      </div>
+    </div>
+  </article>
+</section>
